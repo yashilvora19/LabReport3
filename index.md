@@ -4,7 +4,7 @@
 
 In this lab report, I will look more closely at the find command and explore the different ways in which it can be used to extract information from a directory with files and other subdirectories. In general, the find command is useful for searching files or directories. We can use it to execute a variety of tasks ranging from finding files of a specific type to files with a specific name.
 
-### Use find with the name of the file
+### Use ```find``` with the name of the file
 
 **Example 1**
 
@@ -30,7 +30,7 @@ Here is the output:
 
 Here is a hyperlink for my [source](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/). This way the ```-name``` tag can be used to look for files based on their name. 
 
-### Using find with the extension of the file
+### Using ```find``` with the extension of the file
 
 **Example 1**
 
