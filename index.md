@@ -72,7 +72,7 @@ Here is the link to my [source](https://www.linode.com/docs/guides/find-files-in
 
 This is how ```find``` can be used to get all the files of a particular extension in a directory.
 
-### Finding file names using the app
+### Finding file names if we dont' know the exact name
 
 **Example 1**
 
@@ -88,11 +88,29 @@ Here is the output:
 ./travel_guides/berlitz2/China-WhereToGo.txt
 ```
 
+This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-command).
+
 **Example 2**
 
-This command also works if I don't have an actual word 
+This command also works if I don't have an actual word. For example, even if I put "Canc" as the string to look for, it will give me all the files containing that.
+
+```written_2:520$ find ./*/*/* -iname "*Canc*txt"```
+
+Here is my output:
+
+```
+./travel_guides/berlitz2/Cancun-History.txt
+./travel_guides/berlitz2/Cancun-WhatToDo.txt
+./travel_guides/berlitz2/Cancun-WhereToGo.txt
+```
+
+This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-command). This is how find can be used to get files when we don't know the exact name.
+
+### Finding file names using the app
+
+**Example 1**
 
 
 
-
+**Example 2**
 
