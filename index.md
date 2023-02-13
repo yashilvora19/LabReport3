@@ -4,13 +4,13 @@
 
 In this lab report, I will look more closely at the find command and explore the different ways in which it can be used to extract information from a directory with files and other subdirectories. In general, the find command is useful for searching files or directories. We can use it to execute a variety of tasks ranging from finding files of a specific type to files with a specific name.
 
-### Use `find` with the name of the file
+### 1. Use `find` with the name of the file
 
 **Example 1**
 
 To find a file based on its name, the following command is run (all my commands are running using data from the skill-demo1-data directory and its subdirectories):
 
-` find -name WhatToJapan.txt`
+`find -name WhatToJapan.txt`
 
 This is the output of this command: 
 
@@ -30,17 +30,17 @@ Here is the output:
 
 Here is a hyperlink for my [source](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/). This way the ```-name``` tag can be used to look for files based on their name. 
 
-### Using ```find``` with the extension of the file
+### 2. Using `find` with the extension of the file
 
 **Example 1**
 
 This command can also be used to find files of a single extension type. For example, if I wanted to look for all the .txt files in a directory, I could use this command:
 
-```find Berk -name *.txt > numberTextFiles```
+`find Berk -name *.txt > numberTextFiles`
 
-**Note:** This is the path for Berk (```/home/linux/ieng6/cs15lwi23/cs15lwi23aqv/skill-demo1-data/written_2/non-fiction/OUP```)
+**Note:** This is the path for Berk (`/home/linux/ieng6/cs15lwi23/cs15lwi23aqv/skill-demo1-data/written_2/non-fiction/OUP`)
 
-I stored all the file paths with a .txt file extension in numberTextFiles.txt. To access this information I can run ```cat numberTextFiles``` to display this information in the terminal.
+I stored all the file paths with a .txt file extension in numberTextFiles.txt. To access this information I can run `cat numberTextFiles` to display this information in the terminal.
 
 ```
 Berk/CH4.txt
@@ -55,7 +55,7 @@ Here is the link to my [source](https://www.linode.com/docs/guides/find-files-in
 
 I will repeat this with some text files from another directory:
 
-```find Fletcher -name *.txt```
+`find Fletcher -name *.txt`
 
 This is my output:
 
@@ -70,15 +70,15 @@ Fletcher/ch9.txt
 
 Here is the link to my [source](https://www.linode.com/docs/guides/find-files-in-linux-using-the-command-line/).
 
-This is how ```find``` can be used to get all the files of a particular extension in a directory.
+This is how `find` can be used to get all the files of a particular extension in a directory.
 
-### Finding file names if we dont' know the exact name
+### 3. Finding file names if we dont' know the exact name
 
 **Example 1**
 
-We can also find a file if we know a word it contains in the name of the file (for example, I want to look for all files that contain China in the file name). We can use ```-iname``` for this operation:
+We can also find a file if we know a word it contains in the name of the file (for example, I want to look for all files that contain China in the file name). We can use `-iname` for this operation:
 
-```find ./*/*/* -iname "*China*txt"```
+`find ./*/*/* -iname "*China*txt"`
 
 Here is the output:
 
@@ -94,7 +94,7 @@ This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-comma
 
 This command also works if I don't have an actual word. For example, even if I put "Canc" as the string to look for, it will give me all the files containing that.
 
-```written_2:520$ find ./*/*/* -iname "*Canc*txt"```
+`written_2:520$ find ./*/*/* -iname "*Canc*txt"`
 
 Here is my output:
 
@@ -110,9 +110,9 @@ This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-comma
 
 **Example 1**
 
-Find can also be used in combination with other commands such as ```grep``` in order to execute more specific tasks. This is used when we know the contents of the file and want to know which file has it, we can carry out a command like this: If I am looking for a word such as "Eiffel" in all of the files in the berlitz1 directory, I can use a combination of ```grep``` and ```find```.
+Find can also be used in combination with other commands such as `grep` in order to execute more specific tasks. This is used when we know the contents of the file and want to know which file has it, we can carry out a command like this: If I am looking for a word such as "Eiffel" in all of the files in the berlitz1 directory, I can use a combination of `grep` and `find`.
 
-```find berlitz1 -name "*.txt" -exec grep -Hi Eiffel {} \;```
+`find berlitz1 -name "*.txt" -exec grep -Hi Eiffel {} \;`
 
 Here is the output:
 
@@ -137,7 +137,7 @@ This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-comma
 
 I tried this with another word "Amazon". I did this with the idea of looking for a file that tallks about the Amazon river. However, the results in this case are a little bit different.
 
-```find berlitz1 -name "*.txt" -exec grep -Hi Amazon {} \;```
+`find berlitz1 -name "*.txt" -exec grep -Hi Amazon {} \;`
 
 Output:
 
