@@ -7,8 +7,10 @@ In this lab report, I will look more closely at the find command and explore the
 ### Use find with the name of the file
 
 To find a file based on its name, the following command is run (all my commands are running using data from the skill-demo1-data directory and its subdirectories):
-
 ``` find -name WhatToJapan.txt```
+
+This is the output of this command: 
+```./written_2/travel_guides/berlitz1/WhatToJapan.txt```
 
 ### Using find with the extension of the file
 
