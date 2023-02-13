@@ -53,11 +53,44 @@ Here is the link to my [source](https://www.linode.com/docs/guides/find-files-in
 
 **Example 2**
 
-I will repeat this 
+I will repeat this with some text files from another directory:
+
+```find Fletcher -name *.txt```
+
+This is my output:
+
+```
+Fletcher/ch1.txt
+Fletcher/ch10.txt
+Fletcher/ch2.txt
+Fletcher/ch5.txt
+Fletcher/ch6.txt
+Fletcher/ch9.txt
+```
+
 Here is the link to my [source](https://www.linode.com/docs/guides/find-files-in-linux-using-the-command-line/).
 
-### THIRD COMMAND
+This is how ```find``` can be used to get all the files of a particular extension in a directory.
 
+### Finding file names using the app
+
+**Example 1**
+
+We can also find a file if we know a word it contains in the name of the file (for example, I want to look for all files that contain China in the file name):
+
+```find ./*/*/* -iname "*China*txt"```
+
+Here is the output:
+
+```
+./travel_guides/berlitz2/China-History.txt
+./travel_guides/berlitz2/China-WhatToDo.txt
+./travel_guides/berlitz2/China-WhereToGo.txt
+```
+
+**Example 2**
+
+This command also works if I don't have an actual word 
 
 
 
