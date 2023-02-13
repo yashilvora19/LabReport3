@@ -76,7 +76,7 @@ This is how ```find``` can be used to get all the files of a particular extensio
 
 **Example 1**
 
-We can also find a file if we know a word it contains in the name of the file (for example, I want to look for all files that contain China in the file name):
+We can also find a file if we know a word it contains in the name of the file (for example, I want to look for all files that contain China in the file name). We can use ```-iname``` for this operation:
 
 ```find ./*/*/* -iname "*China*txt"```
 
@@ -106,11 +106,50 @@ Here is my output:
 
 This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-command). This is how find can be used to get files when we don't know the exact name.
 
-### Finding file names using the app
+### Finding files by content
 
 **Example 1**
 
+Find can also be used in combination with other commands such as ```grep``` in order to execute more specific tasks. This is used when we know the contents of the file and want to know which file has it, we can carry out a command like this: If I am looking for a word such as "Eiffel" in all of the files in the berlitz1 directory, I can use a combination of ```grep``` and ```find```.
 
+```find berlitz1 -name "*.txt" -exec grep -Hi Eiffel {} \;```
+
+Here is the output:
+
+```
+berlitz1/HistoryFrance.txt:        pride found its perfect expression in the Eiffel Tower, thrust into the
+berlitz1/IntroLasVegas.txt:        walking distance of one another, loom replicas of the Eiffel Tower, a
+berlitz1/WhereToEgypt.txt:        structure in the world until the building of the Eiffel Tower in Paris
+berlitz1/WhereToFrance.txt:        the Eiffel Tower, Arc de Triomphe, and Hôtel de Ville.
+berlitz1/WhereToFrance.txt:        commentary — sites including the Eiffel Tower, the Palais de Chaillot
+berlitz1/WhereToFrance.txt:        Invalides–Eiffel Tower
+berlitz1/WhereToFrance.txt:        to look at twice, and then there is the Eiffel Tower. Monuments usually
+berlitz1/WhereToFrance.txt:        but the Eiffel Tower is a monument for its own sake, a proud gesture to
+berlitz1/WhereToFrance.txt:        Horloge is Rouen’s emblem, its Eiffel Tower. The ornamental gilded
+berlitz1/WhereToJapan.txt:        Liberty, the Eiffel Tower, the Kremlin, the Great Wall — are man-made.
+berlitz1/WhereToJapan.txt:        the Tsutenkaku Tower, a rather desperate imitation of the Eiffel Tower
+berlitz1/WhereToLakeDistrict.txt:        in 1849; some think it served as the inspiration for Tour d’Eiffel in
+```
+
+This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-command).
 
 **Example 2**
 
+I tried this with another word "Amazon". I did this with the idea of looking for a file that tallks about the Amazon river. However, the results in this case are a little bit different.
+
+```find berlitz1 -name "*.txt" -exec grep -Hi Amazon {} \;```
+
+Output:
+
+```
+berlitz1/WhereToFWI.txt:        though only copies of his paintings. Also in Le Carbet: the Amazona
+berlitz1/WhereToLakeDistrict.txt:        book Swallows and Amazons (1930). The lake and its islands were his
+```
+
+The words "Amazona" and "Amazons" were caught as well! Thus, we can conclude that any string that is either equal to or contains the string specified will be caught by using this command.
+
+This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-command).
+
+### Conclusion
+
+This lab report was particularly interesting since it allowed me to explore and learn a lot of different commands which could be used while working on projects. Exploring 4 different ways in which ```find``` can be used showed me the potential of some of these Linux commands and pushed me to explore how they work in more detail. All in all, this lab report gave me the oppurtunity to implement my learnings in a practical environment and learn new things about some of these commands.
