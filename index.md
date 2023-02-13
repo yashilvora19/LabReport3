@@ -10,7 +10,7 @@ In this lab report, I will look more closely at the find command and explore the
 
 To find a file based on its name, the following command is run (all my commands are running using data from the skill-demo1-data directory and its subdirectories):
 
-`find -name WhatToJapan.txt`
+`$ find -name WhatToJapan.txt`
 
 This is the output of this command: 
 
@@ -22,7 +22,7 @@ This gave me the file path of where the file with the specified name is located.
 
 Now, I'll look for a file in some ther directory:
 
-`find -name Bali-History.txt`
+`$ find -name Bali-History.txt`
 
 Here is the output:
 
@@ -36,7 +36,7 @@ Here is a hyperlink for my [source](https://www.geeksforgeeks.org/find-command-i
 
 This command can also be used to find files of a single extension type. For example, if I wanted to look for all the .txt files in a directory, I could use this command:
 
-`find Berk -name *.txt > numberTextFiles`
+`$ find Berk -name *.txt > numberTextFiles`
 
 **Note:** This is the path for Berk (`/home/linux/ieng6/cs15lwi23/cs15lwi23aqv/skill-demo1-data/written_2/non-fiction/OUP`)
 
@@ -55,7 +55,7 @@ Here is the link to my [source](https://www.linode.com/docs/guides/find-files-in
 
 I will repeat this with some text files from another directory:
 
-`find Fletcher -name *.txt`
+`$ find Fletcher -name *.txt`
 
 This is my output:
 
@@ -78,7 +78,7 @@ This is how `find` can be used to get all the files of a particular extension in
 
 We can also find a file if we know a word it contains in the name of the file (for example, I want to look for all files that contain China in the file name). We can use `-iname` for this operation:
 
-`find ./*/*/* -iname "*China*txt"`
+`$ find ./*/*/* -iname "*China*txt"`
 
 Here is the output:
 
@@ -94,7 +94,7 @@ This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-comma
 
 This command also works if I don't have an actual word. For example, even if I put "Canc" as the string to look for, it will give me all the files containing that.
 
-`written_2:520$ find ./*/*/* -iname "*Canc*txt"`
+`$ find ./*/*/* -iname "*Canc*txt"`
 
 Here is my output:
 
@@ -112,7 +112,7 @@ This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-comma
 
 Find can also be used in combination with other commands such as `grep` in order to execute more specific tasks. This is used when we know the contents of the file and want to know which file has it, we can carry out a command like this: If I am looking for a word such as "Eiffel" in all of the files in the berlitz1 directory, I can use a combination of `grep` and `find`.
 
-`find berlitz1 -name "*.txt" -exec grep -Hi Eiffel {} \;`
+`$ find berlitz1 -name "*.txt" -exec grep -Hi Eiffel {} \;`
 
 Here is the output:
 
@@ -137,7 +137,7 @@ This is the link to my [source](https://www.redhat.com/sysadmin/linux-find-comma
 
 I tried this with another word "Amazon". I did this with the idea of looking for a file that tallks about the Amazon river. However, the results in this case are a little bit different.
 
-`find berlitz1 -name "*.txt" -exec grep -Hi Amazon {} \;`
+`$ find berlitz1 -name "*.txt" -exec grep -Hi Amazon {} \;`
 
 Output:
 
