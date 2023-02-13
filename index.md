@@ -4,17 +4,17 @@
 
 In this lab report, I will look more closely at the find command and explore the different ways in which it can be used to extract information from a directory with files and other subdirectories. In general, the find command is useful for searching files or directories. We can use it to execute a variety of tasks ranging from finding files of a specific type to files with a specific name.
 
-### Use ```find``` with the name of the file
+### Use `find` with the name of the file
 
 **Example 1**
 
 To find a file based on its name, the following command is run (all my commands are running using data from the skill-demo1-data directory and its subdirectories):
 
-``` find -name WhatToJapan.txt```
+` find -name WhatToJapan.txt`
 
 This is the output of this command: 
 
-```./written_2/travel_guides/berlitz1/WhatToJapan.txt```
+`./written_2/travel_guides/berlitz1/WhatToJapan.txt`
 
 This gave me the file path of where the file with the specified name is located. Here is a hyperlink for my [source](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/)
 
@@ -22,11 +22,11 @@ This gave me the file path of where the file with the specified name is located.
 
 Now, I'll look for a file in some ther directory:
 
-```find -name Bali-History.txt```
+`find -name Bali-History.txt`
 
 Here is the output:
 
-```./written_2/travel_guides/berlitz2/Bali-History.txt```
+`./written_2/travel_guides/berlitz2/Bali-History.txt`
 
 Here is a hyperlink for my [source](https://www.geeksforgeeks.org/find-command-in-linux-with-examples/). This way the ```-name``` tag can be used to look for files based on their name. 
 
